@@ -1,14 +1,22 @@
 <resources>
     <string name="app_name">Cubic Number Generator</string>
-    <string name="generate_number">Generate Number</string>
+    <string name="generate_number">Generate New Number</string>
     <string name="result_view">Result View</string>
-    <string name="guess_cube_root">Guess Cube Root</string>
+    <string name="guess_cube_root">Confirm Cube Root</string>
+    <string name="inputMask">Write Answer Here</string>
     <string name="please_enter_the_guessed_cube_root">Please enter the guessed cube root</string>
-    <string name="please_guess">Please guess</string>
+    <string name="please_guess">Please answer</string>
     <string name="result">Result</string>
     <string name="welcomeText">Welcome To Cubic Number Generator</string>
     <string name="logoInfo">Logo of Quasarrete</string>
     <string name="casual_mode">Casual Mode</string>
     <string name="challenge_mode">Challenge Mode</string>
     <string name="back">Back</string>
+    <string name="credits">Credits</string>
+    <string name="creatorInfo">This app is developed by
+        \nAbdullah Hussain.
+        \n@quasarrete
+        \n@supaabzz
+        \nwww.quasarrete.com</string>
+    <string name="submit">Submit Answer</string>
 </resources>

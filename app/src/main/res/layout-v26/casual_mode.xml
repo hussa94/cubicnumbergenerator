@@ -42,10 +42,6 @@
             android:textSize="36sp"
             tools:text="Cubed Number" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="22dp" />
-
         <Button
             android:id="@+id/generateButton"
             style="@style/Widget.AppCompat.Button.Colored"
@@ -54,24 +50,16 @@
             android:text="@string/generate_number"
             tools:text="Generate Number" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="22dp" />
-
         <EditText
             android:id="@+id/numberField"
             android:layout_width="match_parent"
             android:layout_height="99dp"
             android:ems="10"
-            android:hint="@string/please_guess"
+            android:hint="@string/inputMask"
             android:importantForAutofill="no"
             android:inputType="numberSigned"
             android:textAlignment="center"
             android:textSize="36sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="22dp" />
 
         <Button
             android:id="@+id/submitAnswer"
@@ -87,13 +75,9 @@
         <TextView
             android:id="@+id/confirmationViewer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:textAlignment="center"
             android:textSize="18sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="91dp" />
 
         <Button
             android:id="@+id/backButton"

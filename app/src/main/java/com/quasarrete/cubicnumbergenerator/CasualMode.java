@@ -36,6 +36,8 @@ public class CasualMode extends AppCompatActivity {
         confirmationView = findViewById(R.id.confirmationViewer);
         backBtn = findViewById(R.id.backButton);
 
+        generateRandom();
+        setTextView();
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,8 +76,8 @@ public class CasualMode extends AppCompatActivity {
         }
     }
 
-    private void showResult(int test) {
-        if (checkAnswer(test)) {
+    private void showResult(int checkResult) {
+        if (checkAnswer(checkResult)) {
             confirmationView.setText("Correct! Please guess the next cube root");
             setTextView();
         } else {

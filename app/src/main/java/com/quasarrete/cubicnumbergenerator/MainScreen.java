@@ -11,6 +11,7 @@ import com.google.android.gms.ads.MobileAds;
 public class MainScreen extends AppCompatActivity {
     private Button casualButton;
     private Button challengeButton;
+    private Button creditButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
         casualButton = findViewById(R.id.casualButton);
         challengeButton = findViewById(R.id.chgBtn);
+        creditButton = findViewById(R.id.creditButton);
 
         casualButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +31,13 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openChallenge();
-//                openCasual();
+
+            }
+        });
+        creditButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCredit();
             }
         });
 
@@ -44,6 +52,11 @@ public class MainScreen extends AppCompatActivity {
 
     private void openChallenge() {
         Intent intent = new Intent(this, ChallengeMode.class);
+        startActivity(intent);
+    }
+
+    private void openCredit() {
+        Intent intent = new Intent(this, Credit.class);
         startActivity(intent);
     }
 }
