@@ -47,11 +47,26 @@
         android:layout_width="match_parent"
         android:layout_height="85dp" />
 
-    <Button
-        android:id="@+id/backButtonCredits"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/back" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backButtonCredits"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/back" />
+
+        <Button
+            android:id="@+id/hintButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/hints" />
+    </LinearLayout>
 
 </LinearLayout>
