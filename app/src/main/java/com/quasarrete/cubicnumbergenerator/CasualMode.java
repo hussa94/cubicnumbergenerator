@@ -80,8 +80,10 @@ public class CasualMode extends AppCompatActivity {
         if (checkAnswer(checkResult)) {
             confirmationView.setText("Correct! Please guess the next cube root");
             setTextView();
+            editText.getText().clear();
         } else {
             confirmationView.setText("Incorrect! Please try again");
+            editText.getText().clear();
         }
     }
 

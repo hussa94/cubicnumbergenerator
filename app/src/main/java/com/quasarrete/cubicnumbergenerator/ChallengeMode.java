@@ -23,7 +23,7 @@ public class ChallengeMode extends AppCompatActivity {
     private int cubeNumber;
     private int incorrectAnswer;
     private int correctAnswer;
-    private int answerdNumber;
+    private int answeredNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class ChallengeMode extends AppCompatActivity {
                     showAlert();
                 } else {
                     try {
-                        answerdNumber = Integer.parseInt(inputText);
+                        answeredNumber = Integer.parseInt(inputText);
                     } catch (NumberFormatException e) {
                         System.out.println(e);
                     }
@@ -118,12 +118,15 @@ public class ChallengeMode extends AppCompatActivity {
     }
 
     private void checkResult(){
-        if(answerdNumber==originalNumber){
+        if(answeredNumber ==originalNumber){
             setMessageV("Correct");
             correctAnswer++;
+            input.getText().clear();
+
         }else{
             incorrectAnswer++;
             setMessageV("Incorrect");
+            input.getText().clear();
         }
         displayScore();
         generateRandom();
