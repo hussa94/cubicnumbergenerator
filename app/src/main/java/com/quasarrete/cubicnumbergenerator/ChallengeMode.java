@@ -119,9 +119,11 @@ public class ChallengeMode extends AppCompatActivity {
 
     private void checkResult(){
         if(answerdNumber==originalNumber){
+            setMessageV("Correct");
             correctAnswer++;
         }else{
             incorrectAnswer++;
+            setMessageV("Incorrect");
         }
         displayScore();
         generateRandom();
