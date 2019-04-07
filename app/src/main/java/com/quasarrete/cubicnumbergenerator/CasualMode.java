@@ -1,7 +1,10 @@
 package com.quasarrete.cubicnumbergenerator;
 
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +25,7 @@ public class CasualMode extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.casual_mode);
         textView = findViewById(R.id.resultViewer);
         textView.setText("Number Generated");
         button1 = findViewById(R.id.generateButton);
@@ -41,8 +44,14 @@ public class CasualMode extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number = Integer.parseInt(editText.getText().toString());
-                showResult(number);
+                String inputText = editText.getText().toString();
+                if (inputText.equals("")) {
+                    showAlert();
+                } else {
+                    number = parseInt(inputText);
+                    showResult(number);
+                }
+
             }
         });
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -53,12 +62,20 @@ public class CasualMode extends AppCompatActivity {
         });
     }
 
+    private Integer parseInt(String text) {
+        try {
+            return Integer.parseInt(text);
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+
     private void showResult(int test) {
         if (checkAnswer(test)) {
-            confirmationView.setText("Correct!");
+            confirmationView.setText("Correct! Please guess the next cube root");
             setTextView();
         } else {
-            confirmationView.setText("Incorrect!");
+            confirmationView.setText("Incorrect! Please try again");
         }
     }
 
@@ -80,6 +97,7 @@ public class CasualMode extends AppCompatActivity {
     }
 
     private boolean checkAnswer(int number) {
+
         if (originalNumber == number) {
             return true;
         } else {
@@ -88,8 +106,34 @@ public class CasualMode extends AppCompatActivity {
 
     }
 
-    private void backToMain(){
+    private void backToMain() {
         Intent intent = new Intent(this, MainScreen.class);
         startActivity(intent);
+    }
+
+    private void showAlert() {
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        builder1.setMessage("You have not entered a value, Please make a guess");
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Okay",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        /**
+         builder1.setNegativeButton(
+                "Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        **/
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
     }
 }

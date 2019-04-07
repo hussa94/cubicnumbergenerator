@@ -55,6 +55,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/challenge_mode" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+        <Button
+            android:id="@+id/creditButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="credits" />
     </LinearLayout>
 
 </RelativeLayout>
