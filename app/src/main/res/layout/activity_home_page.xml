@@ -50,7 +50,7 @@
             android:layout_height="44dp" />
 
         <Button
-            android:id="@+id/challengeButton"
+            android:id="@+id/chgBtn"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

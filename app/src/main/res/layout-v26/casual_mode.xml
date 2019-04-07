@@ -22,9 +22,10 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/logoView"
             android:layout_width="wrap_content"
             android:layout_height="98dp"
+            android:contentDescription="@string/logoInfo"
             app:srcCompat="@drawable/square" />
 
         <Space
@@ -92,14 +93,14 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="160dp" />
+            android:layout_height="91dp" />
 
         <Button
             android:id="@+id/backButton"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back" />
+            android:text="@string/back" />
 
     </LinearLayout>
 

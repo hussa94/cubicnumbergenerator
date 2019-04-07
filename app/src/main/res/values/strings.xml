@@ -6,9 +6,9 @@
     <string name="please_enter_the_guessed_cube_root">Please enter the guessed cube root</string>
     <string name="please_guess">Please guess</string>
     <string name="result">Result</string>
-    <string name="guess_to_check">Guess to check</string>
     <string name="welcomeText">Welcome To Cubic Number Generator</string>
     <string name="logoInfo">Logo of Quasarrete</string>
     <string name="casual_mode">Casual Mode</string>
     <string name="challenge_mode">Challenge Mode</string>
+    <string name="back">Back</string>
 </resources>

@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ChallengeMode"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4474129521686241~2057628767" />
+
         <activity android:name=".CasualMode" />
         <activity android:name=".MainScreen">
             <intent-filter>

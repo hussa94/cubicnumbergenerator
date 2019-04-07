@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.MobileAds;
+
 public class CasualMode extends AppCompatActivity {
     TextView textView;
     TextView confirmationView;
@@ -60,6 +62,8 @@ public class CasualMode extends AppCompatActivity {
                 backToMain();
             }
         });
+
+        MobileAds.initialize(this, "ca-app-pub-4474129521686241~2057628767");
     }
 
     private Integer parseInt(String text) {
